@@ -10,6 +10,12 @@ const Landing = ({ isAuthenticated }) => {
   return (
     <div>
       <h1>THIS IS THE LANDING PAGE</h1>
+      <button className="btn btn-dark">
+        <Link to="/login">Login</Link>
+      </button>
+      <button className="btn btn-dark">
+        <Link to="/register">Register</Link>
+      </button>
     </div>
   );
 };
