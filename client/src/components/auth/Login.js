@@ -15,16 +15,49 @@ const Login = ({ login, isAuthenticated }) => {
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const onSubmit = async (e) => {
-        e.preventDefault();
-        login(email, password);
-    }
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    login(email, password);
+  };
 
-    if (isAuthenticated) {
-        return <Redirect to="/dashboard" />;
-    }
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
+  }
 
-  return (<Fragment>THIS IS THE LOGIN PAGE</Fragment>);
+  return (
+    <Fragment>
+      <h1 className="">Sign In</h1>
+      <p className="">
+        <i className="fas fa-user" /> Sign Into Your Account
+      </p>
+      <form className="" onSubmit={onSubmit}>
+        <div className="">
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            value={email}
+            onChange={onChange}
+            required
+          />
+        </div>
+        <div className="">
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            value={password}
+            onChange={onChange}
+            minLength="6"
+          />
+        </div>
+        <input type="submit" className="btn btn-primary" value="Login" />
+      </form>
+      <p className="">
+        Don't have an account? <Link to="/register">Sign Up</Link>
+      </p>
+    </Fragment>
+  );
 };
 
 Login.propTypes = {

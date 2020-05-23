@@ -1,11 +1,7 @@
 import React, { Fragment } from "react";
 
 const NotFound = () => {
-  return (
-    <Fragment>
-      THIS PAGE DOESNT EXIST 404
-    </Fragment>
-  );
+  return <div>this page does not exist</div>;
 };
 
 export default NotFound;

@@ -6,21 +6,30 @@ import { logout } from "../../actions/auth";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <Link to="/profiles">All Users</Link>
+    <ul className="navbar-nav">
+      <li className="nav-item">
+        <Link to="/" className="nav-link">
+          <i className="fas fa-headset"> Pistonheads</i>
+        </Link>
       </li>
-      <li class="nav-item">
-        <Link to="/posts">Posts</Link>
+      <li className="nav-item">
+        <Link to="/profiles" className="nav-link">
+          All Users
+        </Link>
       </li>
-      <li class="nav-item">
-        <Link to="/dashboard">
+      <li className="nav-item">
+        <Link to="/posts" className="nav-link">
+          Posts
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link to="/dashboard" className="nav-link">
           <i className="fas fa-user" />{" "}
           <span className="hide-sm">Dashboard</span>
         </Link>
       </li>
-      <li class="nav-item">
-        <a onClick={logout} href="#!">
+      <li className="nav-item">
+        <a onClick={logout} href="#!" className="nav-link">
           <i className="fas fa-sign-out-alt" />{" "}
           <span className="hide-sm">Logout</span>
         </a>
@@ -29,19 +38,24 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <Link to="/profiles" class="nav-link">
+    <ul className="navbar-nav">
+      <li className="nav-item">
+        <Link to="/" className="nav-link">
+          <i className="fas fa-headset"> Pistonheads</i>
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link to="/profiles" className="nav-link">
           All Users
         </Link>
       </li>
-      <li class="nav-item">
-        <Link to="/register" class="nav-link">
+      <li className="nav-item">
+        <Link to="/register" className="nav-link">
           Register
         </Link>
       </li>
-      <li class="nav-item">
-        <Link to="/login" class="nav-link">
+      <li className="nav-item">
+        <Link to="/login" className="nav-link">
           Login
         </Link>
       </li>
@@ -49,14 +63,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   return (
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <Link to="/" class="nav-link">
-            <i className="fas fa-headset"> Pistonheads</i>
-          </Link>
-        </li>
-      </ul>
+    <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}
