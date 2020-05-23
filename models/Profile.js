@@ -8,6 +8,10 @@ const ProfileSchema = new mongoose.Schema({
   website: {
     type: String,
   },
+  favgame: {
+    type: String,
+    required: true
+  },
   steamusername: {
     type: String,
   },
