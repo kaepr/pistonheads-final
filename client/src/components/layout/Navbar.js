@@ -36,6 +36,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div className="navbar-end">
+          <Link className="navbar-item" to="/streaming">
+            <span>Streaming</span>
+          </Link>
           <Link className="navbar-item" to="/profiles">
             <i className="fas fa-user-circle"></i> <span>All Users</span>
           </Link>

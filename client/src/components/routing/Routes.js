@@ -11,6 +11,7 @@ import Profiles from "../profiles/Profiles";
 import Profile from "../profile/Profile";
 import Posts from "../posts/Posts";
 import Post from "../post/Post";
+import Streaming from "../streaming/Streaming";
 
 const Routes = (props) => {
   return (
@@ -26,6 +27,7 @@ const Routes = (props) => {
         <PrivateRoute exact path="/edit-profile" component={ProfileForm} />
         <PrivateRoute exact path="/posts" component={Posts} />
         <PrivateRoute exact path="/posts/:id" component={Post} />
+        <PrivateRoute exact path="/streaming" component={Streaming} />
       </Switch>
     </section>
   );
