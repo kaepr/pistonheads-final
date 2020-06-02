@@ -21,3 +21,8 @@ npm install
 use
 npm run dev
 to run everything simultaneously
+
+
+link to site : https://pure-badlands-29160.herokuapp.com/
+
+** Design still in work
