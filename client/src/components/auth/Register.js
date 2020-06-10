@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import { connect } from "react-redux";
+import "./style.scss";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -33,56 +34,85 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className="">Sign Up</h1>
-      <p className="">
-        <i className="fas fa-user" /> Create Your Account
-      </p>
-      <form className="" onSubmit={onSubmit}>
-        <div className="">
-          <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={name}
-            onChange={onChange}
-          />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div className="card card-signin my-5">
+              <div className="card-body">
+                <form className="form-signin" onSubmit={onSubmit}>
+                  <div className="form-label-group">
+                    <input
+                      type="text"
+                      id="inputName"
+                      name="name"
+                      value={name}
+                      className="form-control"
+                      placeholder="Name"
+                      onChange={onChange}
+                      required
+                      autofocus
+                    />
+                    <label for="inputName">Username</label>
+                  </div>
+
+                  <div className="form-label-group">
+                    <input
+                      type="email"
+                      id="inputEmail"
+                      name="email"
+                      value={email}
+                      className="form-control"
+                      placeholder="Email address"
+                      onChange={onChange}
+                      required
+                      autofocus
+                    />
+                    <label for="inputEmail">Email address</label>
+                  </div>
+
+                  <div className="form-label-group">
+                    <input
+                      type="password"
+                      name="password"
+                      value={password}
+                      onChange={onChange}
+                      minLength="6"
+                      id="inputPassword"
+                      className="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                    <label for="inputPassword">Password</label>
+                  </div>
+
+
+                  <div className="form-label-group">
+                    <input
+                      type="password"
+                      name="password2"
+                      value={password2}
+                      onChange={onChange}
+                      minLength="6"
+                      id="inputPassword2"
+                      className="form-control"
+                      placeholder="Password Again"
+                      required
+                    />
+                    <label for="inputPassword2">Password Again</label>
+                  </div>
+
+                  <button
+                    className="btn btn-lg btn-primary btn-block text-uppercase"
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="">
-          <input
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            value={email}
-            onChange={onChange}
-          />
-          <small className="">
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small>
-        </div>
-        <div className="">
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={password}
-            onChange={onChange}
-          />
-        </div>
-        <div className="">
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            name="password2"
-            value={password2}
-            onChange={onChange}
-          />
-        </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
-      </form>
-      <p className="">
-        Already have an account? <Link to="/login">Sign In</Link>
-      </p>
+      </div>
     </Fragment>
   );
 };

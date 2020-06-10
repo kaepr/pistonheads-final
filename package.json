@@ -30,7 +30,8 @@
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.15",
-    "normalize-url": "^5.0.0"
+    "normalize-url": "^5.0.0",
+    "react-script-tag": "^1.1.2"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

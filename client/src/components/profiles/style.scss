@@ -1,0 +1,35 @@
+.profile-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #e8dfdf;
+    height: 300px;
+    width: 1000px;
+    margin:  20px 0 auto 50px;
+    border-radius: 10px;
+}
+
+
+.profile-image-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.profile-info-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-card-image {
+    border-radius: 10%;
+}
+
+.profile-username-text {
+    color: #262121;
+
+}

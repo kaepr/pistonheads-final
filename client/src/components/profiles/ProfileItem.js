@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import "./style.scss";
 
 const ProfileItem = ({
   profile: {
@@ -12,7 +13,35 @@ const ProfileItem = ({
   },
 }) => {
   return (
-    <div className="bg-secondary">
+    <Fragment>
+      <div className="profile-card-container">
+        <div className="profile-image-area">
+          <img src={avatar} className="profile-card-image" />
+          <div className="profile-username-text">{name}</div>
+        </div>
+        <div className="profile-info-area">
+          <p>Favorite Game : {favgame}</p>
+          <p>Steam Username : {steamusername}</p>
+          <p>PlayStation ID : {playstationid}</p>
+          <p>Xbox ID : {xboxid}</p>
+          <Link to={`/profile/${_id}`} className="btn btn-primary">
+            View Profile
+          </Link>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+
+ProfileItem.propTypes = {
+  profile: PropTypes.object.isRequired,
+};
+
+export default ProfileItem;
+
+/*
+
+<div className="bg-secondary">
       <img src={avatar} alt="" className="round-img" />
       <div>
         <h2>{name}</h2>
@@ -27,11 +56,6 @@ const ProfileItem = ({
         </Link>
       </div>
     </div>
-  );
-};
 
-ProfileItem.propTypes = {
-  profile: PropTypes.object.isRequired,
-};
 
-export default ProfileItem;
+*/

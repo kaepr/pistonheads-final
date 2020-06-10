@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
+import "./style.scss";
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -26,36 +27,53 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className="">Sign In</h1>
-      <p className="">
-        <i className="fas fa-user" /> Sign Into Your Account
-      </p>
-      <form className="" onSubmit={onSubmit}>
-        <div className="">
-          <input
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            value={email}
-            onChange={onChange}
-            required
-          />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div className="card card-signin my-5">
+              <div className="card-body">
+                <form className="form-signin" onSubmit={onSubmit}>
+                  <div className="form-label-group">
+                    <input
+                      type="email"
+                      id="inputEmail"
+                      name="email"
+                      value={email}
+                      className="form-control"
+                      placeholder="Email address"
+                      onChange={onChange}
+                      required
+                      autofocus
+                    />
+                    <label for="inputEmail">Email address</label>
+                  </div>
+
+                  <div className="form-label-group">
+                    <input
+                      type="password"
+                      name="password"
+                      value={password}
+                      onChange={onChange}
+                      minLength="6"
+                      id="inputPassword"
+                      className="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                    <label for="inputPassword">Password</label>
+                  </div>
+                  <button
+                    className="btn btn-lg btn-primary btn-block text-uppercase"
+                    type="submit"
+                  >
+                    Sign in
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="">
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={password}
-            onChange={onChange}
-            minLength="6"
-          />
-        </div>
-        <input type="submit" className="btn btn-primary" value="Login" />
-      </form>
-      <p className="">
-        Don't have an account? <Link to="/register">Sign Up</Link>
-      </p>
+      </div>
     </Fragment>
   );
 };
