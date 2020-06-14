@@ -15,10 +15,23 @@
 html,
 body {
   height: 100%;
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  background: #6d0970;
-  background: linear-gradient(to right, #ac1eb0, #7a0b7d);
+  width: 100%;
+  background: #330d38;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #330d38 0%, #190d36 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#330d38),
+    to(#190d36)
+  );
+  background: -o-linear-gradient(left, #330d38 0%, #190d36 100%);
+  background: linear-gradient(to right, #330d38 0%, #190d36 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#330d38', endColorstr='#190d36', GradientType=1);
 }
 
 h1,

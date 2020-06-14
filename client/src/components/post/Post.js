@@ -17,15 +17,28 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <Link to="/posts" className="btn">
+      <br />
+      <Link to="/posts" className="btn btn-secondary">
         Back To Posts
       </Link>
-      <PostItem post={post} showActions={false} />
-      <CommentForm postId={post._id} />
-      <div className="">
-        {post.comments.map((comment) => (
-          <CommentItem key={comment._id} comment={comment} postId={post._id} />
-        ))}
+      <br />
+
+      <div className="container">
+        <div class="community-warp spad">
+          <ul className="community-post-list">
+            <PostItem post={post} showActions={false} />
+          </ul>
+          <CommentForm postId={post._id} />
+          <ul className="community-post-list">
+            {post.comments.map((comment) => (
+              <CommentItem
+                key={comment._id}
+                comment={comment}
+                postId={post._id}
+              />
+            ))}
+          </ul>
+        </div>
       </div>
     </Fragment>
   );
@@ -41,3 +54,17 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { getPost })(Post);
+
+/*
+<div className="container">
+        <ul className="community-post-list">
+          {post.comments.map((comment) => (
+            <CommentItem
+              key={comment._id}
+              comment={comment}
+              postId={post._id}
+            />
+          ))}
+        </ul>
+      </div>
+*/

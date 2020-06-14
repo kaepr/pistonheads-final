@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import PostItem from "./PostItem";
 import PostForm from "./PostForm";
 import { getPosts } from "../../actions/post";
+import "./style.scss";
 
 const Posts = ({ getPosts, post: { posts } }) => {
   useEffect(() => {
@@ -12,15 +13,15 @@ const Posts = ({ getPosts, post: { posts } }) => {
 
   return (
     <Fragment>
-      <h1 className="text-primary">Posts</h1>
-      <p className="">
-        <i className="fas fa-user" /> Welcome to the community
-      </p>
-      <PostForm />
-      <div className="">
-        {posts.map((post) => (
-          <PostItem key={post._id} post={post} />
-        ))}
+      <div className="container">
+        <div class="community-warp spad">
+          <PostForm />
+          <ul className="community-post-list">
+            {posts.map((post) => (
+              <PostItem key={post._id} post={post} />
+            ))}
+          </ul>
+        </div>
       </div>
     </Fragment>
   );

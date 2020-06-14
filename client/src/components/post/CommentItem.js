@@ -11,7 +11,52 @@ const CommentItem = ({
   auth,
   deleteComment,
 }) => (
-  <div className="bg-white">
+  <li>
+    <div className="community-post">
+      <div className="author-avator">
+        <Link to={`/profile/${user}`}>
+          <img src={avatar} alt="author" />
+        </Link>
+      </div>
+    </div>
+    <div className="post-content">
+      <h5>
+        {name}
+        <span> commented </span>
+      </h5>
+      <div className="post-date">
+        {" "}
+        Date <Moment format="YYYY/MM/DD">{date}</Moment>
+      </div>
+      <p>{text}</p>
+      {!auth.loading && user === auth.user._id && (
+        <button
+          onClick={() => deleteComment(postId, _id)}
+          type="button"
+          className="btn btn-danger"
+        >
+          <i className="fas fa-times" />
+        </button>
+      )}
+    </div>
+  </li>
+);
+
+CommentItem.propTypes = {
+  postId: PropTypes.string.isRequired,
+  comment: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
+  deleteComment: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { deleteComment })(CommentItem);
+
+/*
+<div className="bg-white">
     <div>
       <Link to={`/profile/${user}`}>
         <img className="round-img" src={avatar} alt="" />
@@ -34,17 +79,4 @@ const CommentItem = ({
       )}
     </div>
   </div>
-);
-
-CommentItem.propTypes = {
-  postId: PropTypes.string.isRequired,
-  comment: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired,
-  deleteComment: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  auth: state.auth,
-});
-
-export default connect(mapStateToProps, { deleteComment })(CommentItem);
+*/
