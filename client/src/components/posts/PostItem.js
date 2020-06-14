@@ -17,7 +17,9 @@ const PostItem = ({
   <li>
     <div className="community-post">
       <div className="author-avator">
-        <img src={avatar} alt="author" />
+        <Link to={`/profile/${user}`}>
+          <img src={avatar} alt="author" />
+        </Link>
       </div>
       <div className="post-content">
         <h5>
