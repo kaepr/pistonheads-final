@@ -1,0 +1,109 @@
+body {
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    background-size: cover;
+    background: #330d38;
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #330d38 0%, #190d36 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear,
+            left top,
+            right top,
+            from(#330d38),
+            to(#190d36));
+    background: -o-linear-gradient(left, #330d38 0%, #190d36 100%);
+    background: linear-gradient(to right, #330d38 0%, #190d36 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#330d38', endColorstr='#190d36', GradientType=1);
+}
+
+.container {
+    margin-top: 70px;
+    margin-left: 25%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 50%;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.heading {
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.profile-pic {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+h6 {
+    color: goldenrod;
+}
+
+.form-control {
+    color: white;
+    padding-bottom: 20px;
+    text-align: center;
+    padding-left: 60px;
+}
+
+.details {
+    color: goldenrod;
+    text-transform: uppercase;
+    font-size: 15px;
+
+}
+
+.web {
+    padding-bottom: 15px;
+
+}
+
+.game {
+    padding-bottom: 15px;
+}
+
+.ps {
+    padding-bottom: 25px;
+}
+
+.xbox {
+    padding-bottom: 15px;
+}
+
+.steam {
+    padding-bottom: 15px;
+}
+
+.s-btn {
+    background-color: #ffb320;
+
+    height: 30px;
+    font-size: 12px;
+    border: none;
+}
+
+.btn {
+    padding-top: 20px;
+}
+
+.sub__btn {
+    font-size: 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.back__btn {
+    font-size: 15px;
+    border: none;
+    height: 25px;
+    border-radius: 5px;
+}

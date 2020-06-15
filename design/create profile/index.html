@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="container">
+        <h1 class="heading"><u>Edit Profile</u></h1>
+        <div class="text-center">
+            <img src="img/authors/8.jpg" class="profile-pic" alt="avatar">
+            <h6>Upload a different photo...</h6>
+            <input type="file" class="form-control">
+        </div>
+
+
+        <div class="details">
+            <form>
+                <div class="web">
+                    <label for="web">Website:</label><br>
+                    <input type="text" id="web" name="fname" placeholder="Website" required>
+                </div>
+                <div class="game">
+                    <label for="game">Favourite Game:</label><br>
+                    <input type="text" id="game" name="game" placeholder="Game" required>
+                </div>
+                <div class="steam">
+                    <label for="web">Steam Username:</label><br>
+                    <input type="text" id="steam" name="steam" placeholder="Steam" required>
+                </div>
+                <div class="xbox">
+                    <label for="xbox">Xbox Id:</label><br>
+                    <input type="text" id="xbox" name="xbox" placeholder="Xbox" required>
+                </div>
+                <div class="ps">
+                    <label for="ps">PlayStation Id:</label><br>
+                    <input type="text" id="ps" name="ps" placeholder="PlayStation" required>
+                </div>
+                <div class="social-media">
+                    <button class="s-btn" type="button" onclick="togglefields()" id="btn">Add Social Networks
+                        Links</button>
+                </div>
+                <div class="btn">
+                    <button class="sub__btn" type="submit">Submit</button>
+                    <button class="back__btn" type="button">Go Back</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+</body>
+
+</html>
