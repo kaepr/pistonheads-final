@@ -2,16 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import sliderBg4 from "./img/slider-bg-4.jpg";
-import sliderBg2 from "./img/slider-bg-2.jpg";
-import sliderBg1 from "./img/slider-bg-1.jpg";
-import footerLeft from "./img/footer-left-pic.png";
-import footerRight from "./img/footer-right-pic.png";
-import doubleArrow from "./img/icons/double-arrow.png";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import ScriptTag from "react-script-tag";
+import Slider from "./Slider";
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -20,127 +11,133 @@ const Landing = ({ isAuthenticated }) => {
 
   return (
     <Fragment>
-      <section className="pricing py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className="card mb-5 mb-lg-0">
-                <div className="card-body">
-                  <h5 className="card-title text-muted text-uppercase text-center">
-                    Free
-                  </h5>
-                  <h6 className="card-price text-center">
-                    $0<span className="period">/month</span>
-                  </h6>
-                  <hr />
-                  <ul className="fa-ul">
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      Single User
-                    </li>
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      5GB Storage
-                    </li>
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      Unlimited Public Projects
-                    </li>
-                  </ul>
-                  <a
-                    href="#"
-                    className="btn btn-block btn-primary text-uppercase"
-                  >
-                    Checkout
-                  </a>
+      <Slider />
+      <div>
+        <section className="pricing py-5">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-4">
+                <div className="card mb-5 mb-lg-0">
+                  <div className="card-body">
+                    <h5 className="card-title text-muted text-uppercase text-center">
+                      Free
+                    </h5>
+                    <h6 className="card-price text-center">
+                      $0<span className="period">/month</span>
+                    </h6>
+                    <hr />
+                    <ul className="fa-ul">
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                    </ul>
+                    <a
+                      href="#"
+                      className="btn btn-block btn-primary text-uppercase"
+                    >
+                      Games
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="card mb-5 mb-lg-0">
-                <div className="card-body">
-                  <h5 className="card-title text-muted text-uppercase text-center">
-                    Plus
-                  </h5>
-                  <h6 className="card-price text-center">
-                    $9<span className="period">/month</span>
-                  </h6>
-                  <hr />
-                  <ul className="fa-ul">
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      5 Users
-                    </li>
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      50GB Storage
-                    </li>
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      Unlimited Public Projects
-                    </li>
-                  </ul>
-                  <a href="#" className="btn btn-block btn-dark text-uppercase">
-                    Checkout
-                  </a>
+              <div className="col-lg-4">
+                <div className="card mb-5 mb-lg-0">
+                  <div className="card-body">
+                    <h5 className="card-title text-muted text-uppercase text-center">
+                      Plus
+                    </h5>
+                    <h6 className="card-price text-center">
+                      $9<span className="period">/month</span>
+                    </h6>
+                    <hr />
+                    <ul className="fa-ul">
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                    </ul>
+                    <a
+                      href="#"
+                      className="btn btn-block btn-dark text-uppercase"
+                    >
+                      Games
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="col-lg-4">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title text-muted text-uppercase text-center">
-                    Pro
-                  </h5>
-                  <h6 className="card-price text-center">
-                    $49<span className="period">/month</span>
-                  </h6>
-                  <hr />
-                  <ul className="fa-ul">
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      Unlimited Users
-                    </li>
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      150GB Storage
-                    </li>
-                    <li>
-                      <span className="fa-li">
-                        <i className="fas fa-check"></i>
-                      </span>
-                      Unlimited Public Projects
-                    </li>
-                  </ul>
-                  <Link
-                    to="/"
-                    className="btn btn-block btn-primary text-uppercase"
-                  >
-                    Checkout
-                  </Link>
+              <div className="col-lg-4">
+                <div className="card">
+                  <div className="card-body">
+                    <h5 className="card-title text-muted text-uppercase text-center">
+                      Pro
+                    </h5>
+                    <h6 className="card-price text-center">
+                      $49<span className="period">/month</span>
+                    </h6>
+                    <hr />
+                    <ul className="fa-ul">
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                      <li>
+                        <span className="fa-li">
+                          <i className="fas fa-check"></i>
+                        </span>
+                        Games
+                      </li>
+                    </ul>
+                    <Link
+                      to="/"
+                      className="btn btn-block btn-primary text-uppercase"
+                    >
+                      Checkout
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <footer className="footer-section">
         <div className="container">

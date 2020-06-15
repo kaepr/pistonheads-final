@@ -1,0 +1,70 @@
+.slider {
+  border: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  i {
+    font-size: 2vw;
+  }
+}
+
+.slide {
+  border: none;
+  min-width: 100%;
+  height: 100vh;
+  transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%btn-styles {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  &:hover {
+    background: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    i {
+      color: whitesmoke;
+    }
+  }
+}
+
+#goLeft {
+  left: 0;
+  @extend %btn-styles;
+}
+
+#goRight {
+  right: 0;
+  @extend %btn-styles;
+}
+
+.img-styles {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.intro-text-area {
+    opacity: 1.0;
+    position: absolute;
+    h1 {
+        color: white;
+     }
+}
