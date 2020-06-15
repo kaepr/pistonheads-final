@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
+import "./style.scss";
 
 const initialState = {
   website: "",
@@ -64,127 +65,81 @@ const ProfileForm = ({
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Edit Your Profile</h1>
-      <p className="">
-        <i className="fas fa-user" /> Add some changes to your profile
-      </p>
-      <small>* = required field</small>
-      <form className="" onSubmit={onSubmit}>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Website"
-            name="website"
-            value={website}
-            onChange={onChange}
-          />
-          <small className="form-text">
-            Could be your own or a company website
-          </small>
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Favorite Game"
-            name="favgame"
-            value={favgame}
-            onChange={onChange}
-          />
-          <small className="form-text"> *Mention your favorite game</small>
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Steam Username"
-            name="steamusername"
-            value={steamusername}
-            onChange={onChange}
-          />
-          <small className="form-text">Mention your steam username</small>
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="XBOX ID"
-            name="xboxid"
-            value={xboxid}
-            onChange={onChange}
-          />
-          <small className="form-text">Mention your xbox id</small>
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="PlayStation ID"
-            name="playstationid"
-            value={playstationid}
-            onChange={onChange}
-          />
-          <small className="form-text">Mention your playstation id</small>
-        </div>
-
-        <div className="my-2">
-          <button
-            onClick={() => toggleSocialInputs(!displaySocialInputs)}
-            type="button"
-            className="btn btn-light"
-          >
-            Add Social Network Links
-          </button>
-          <span>Optional</span>
-        </div>
-
-        {displaySocialInputs && (
-          <Fragment>
-            <div className="form-group social-input">
-              <i className="fab fa-twitter fa-2x" />
+      <div className="container-edit">
+        <h1 className="heading text-center">Edit Your Profile</h1>
+        <p className="text-center">
+          <i className="fas fa-user" /> Add some changes to your profile
+        </p>
+        <p className="text-center text-light">* = required field</p>
+        <div className="details">
+          <form onSubmit={onSubmit}>
+            <div className="web text-center">
               <input
                 type="text"
-                placeholder="Twitter URL"
-                name="twitter"
-                value={twitter}
+                placeholder="Website"
+                name="website"
+                value={website}
                 onChange={onChange}
               />
+              <p className="form-text text-center text-warning">Website</p>
             </div>
-
-            <div className="form-group social-input">
-              <i className="fab fa-facebook fa-2x" />
+            <div className="game text-center">
               <input
                 type="text"
-                placeholder="Facebook URL"
-                name="facebook"
-                value={facebook}
+                placeholder="Favorite Game"
+                name="favgame"
+                value={favgame}
                 onChange={onChange}
               />
+              <p className="form-text text-center text-warning">
+                {" "}
+                *Mention your favorite game
+              </p>
             </div>
-
-            <div className="form-group social-input">
-              <i className="fab fa-youtube fa-2x" />
+            <div className="steam text-center">
               <input
                 type="text"
-                placeholder="YouTube URL"
-                name="youtube"
-                value={youtube}
+                placeholder="Steam Username"
+                name="steamusername"
+                value={steamusername}
                 onChange={onChange}
               />
+              <p className="form-text text-center text-warning">
+                Mention your steam username
+              </p>
             </div>
-            <div className="form-group social-input">
-              <i className="fab fa-instagram fa-2x" />
+            <div className="xbox text-center">
               <input
                 type="text"
-                placeholder="Instagram URL"
-                name="instagram"
-                value={instagram}
+                placeholder="XBOX ID"
+                name="xboxid"
+                value={xboxid}
                 onChange={onChange}
               />
+              <p className="form-text text-center text-warning">
+                Mention your xbox id
+              </p>
             </div>
-          </Fragment>
-        )}
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
-          Go Back
-        </Link>
-      </form>
+            <div className="ps text-center">
+              <input
+                type="text"
+                placeholder="PlayStation ID"
+                name="playstationid"
+                value={playstationid}
+                onChange={onChange}
+              />
+              <p className="form-text text-center text-warning">
+                Mention your playstation id
+              </p>
+            </div>
+            <input type="submit" className="btn btn-primary" />
+            <span> </span>
+            <Link className="btn btn-light" to="/dashboard">
+              Go Back
+            </Link>
+          </form>
+        </div>
+      </div>
     </Fragment>
   );
 };
@@ -201,3 +156,9 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
   ProfileForm
 );
+
+/*
+
+
+
+*/

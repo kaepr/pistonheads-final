@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import DashboardActions from "./DashboardActions";
 import { getCurrentProfile, deleteAccount } from "../../actions/profile";
+import ProfileItem from "../profiles/ProfileItem";
 
 const Dashboard = ({
   getCurrentProfile,
@@ -17,17 +18,15 @@ const Dashboard = ({
 
   return (
     <Fragment>
-      <h1 className="text-center">LOGGED IN.</h1>
-      <p>
+      <h3 className="text-center">LOGGED IN.</h3>
+      <h2>
         <i className="fas fa-user" />
         Welcome {user && user.name}
-      </p>
-
-      <p>This page, if needed will show the profile,game news etc</p>
+      </h2>
       {profile !== null ? (
         <Fragment>
-          <DashboardActions />
-          <div className="">
+          <div className="container">
+            <ProfileItem key={profile._id} profile={profile} />
             <button className="btn btn-danger" onClick={() => deleteAccount()}>
               <i className="fas fa-user-minus" /> Delete My Account
             </button>

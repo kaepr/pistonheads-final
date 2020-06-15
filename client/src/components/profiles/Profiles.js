@@ -16,9 +16,9 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className="large text-primary">Gamers</h1>
-          <p className="">Check out other gamers</p>
-          <div className="">
+          <h1 >Gamers</h1>
+          <h4>Check out other gamers</h4>
+          <div className="container">
             {profiles.length > 0 ? (
               profiles.map((profile) => (
                 <ProfileItem key={profile._id} profile={profile} />

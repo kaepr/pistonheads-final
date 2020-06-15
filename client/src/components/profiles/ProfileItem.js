@@ -20,13 +20,10 @@ const ProfileItem = ({
           <div className="profile-username-text">{name}</div>
         </div>
         <div className="profile-info-area">
-          <p>Favorite Game : {favgame}</p>
-          <p>Steam Username : {steamusername}</p>
-          <p>PlayStation ID : {playstationid}</p>
-          <p>Xbox ID : {xboxid}</p>
-          <Link to={`/profile/${_id}`} className="btn btn-primary">
-            View Profile
-          </Link>
+          <p className="p-profile-color">Favorite Game : {favgame}</p>
+          <p className="p-profile-color">Steam Username : {steamusername}</p>
+          <p className="p-profile-color">PlayStation ID : {playstationid}</p>
+          <p className="p-profile-color">Xbox ID : {xboxid}</p>
         </div>
       </div>
     </Fragment>
@@ -57,5 +54,13 @@ export default ProfileItem;
       </div>
     </div>
 
+
+    <p className="p-profile-color">Favorite Game : {favgame}</p>
+          <p className="p-profile-color">Steam Username : {steamusername}</p>
+          <p className="p-profile-color">PlayStation ID : {playstationid}</p>
+          <p className="p-profile-color">Xbox ID : {xboxid}</p>
+          <Link to={`/profile/${_id}`} className="btn btn-primary">
+            View Profile
+          </Link>
 
 */

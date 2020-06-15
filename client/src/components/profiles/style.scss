@@ -1,35 +1,43 @@
 .profile-card-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #e8dfdf;
-    height: 300px;
-    width: 1000px;
-    margin:  20px 0 auto 50px;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 300px;
+  width: 900px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  margin: 40px 0 20px 80px;
+  border-radius: 10px;
 }
 
-
 .profile-image-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .profile-info-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -50px;
+  padding-bottom: 15px;
+}
+
+.profile-info-area p {
+  color: white;
 }
 
 .profile-card-image {
-    border-radius: 10%;
+  width: 180px;
+  height: 180px;
+  border-radius: 10%;
 }
 
 .profile-username-text {
-    color: #262121;
-
+  color: white;
+  padding-bottom: 20px;
 }
