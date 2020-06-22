@@ -20,5 +20,3 @@ to run everything simultaneously
 
 link to site :
 https://whispering-dawn-76866.herokuapp.com/
-
-\*\* Design still in work

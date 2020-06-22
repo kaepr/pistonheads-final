@@ -23,7 +23,7 @@ const Landing = ({ isAuthenticated }) => {
                       Free
                     </h5>
                     <h6 className="card-price text-center">
-                      $0<span className="period">/month</span>
+                    ₹0<span className="period">/month</span>
                     </h6>
                     <hr />
                     <ul className="fa-ul">
@@ -62,7 +62,7 @@ const Landing = ({ isAuthenticated }) => {
                       Plus
                     </h5>
                     <h6 className="card-price text-center">
-                      $9<span className="period">/month</span>
+                    ₹249<span className="period">/month</span>
                     </h6>
                     <hr />
                     <ul className="fa-ul">
@@ -102,7 +102,7 @@ const Landing = ({ isAuthenticated }) => {
                       Pro
                     </h5>
                     <h6 className="card-price text-center">
-                      $49<span className="period">/month</span>
+                    ₹499<span className="period">/month</span>
                     </h6>
                     <hr />
                     <ul className="fa-ul">
@@ -129,7 +129,7 @@ const Landing = ({ isAuthenticated }) => {
                       to="/"
                       className="btn btn-block btn-primary text-uppercase"
                     >
-                      Checkout
+                      Games
                     </Link>
                   </div>
                 </div>

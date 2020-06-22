@@ -63,6 +63,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             </Link>
           </li>
           <li className="nav-item active">
+            <Link className="nav-link" to="/recommend">
+              <span>Recommend</span>
+            </Link>
+          </li>
+          <li className="nav-item active">
             <Link className="nav-link" onClick={logout} to="/">
               <i className="fas fa-sign-out-alt"></i>
               <span>Logout</span>
@@ -103,6 +108,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <li className="nav-item active">
             <Link className="nav-link" to="/profiles">
               <i className="fas fa-user-circle"></i> <span>All Users</span>
+            </Link>
+          </li>
+          <li className="nav-item active">
+            <Link className="nav-link" to="/recommend">
+              <span>Recommend</span>
             </Link>
           </li>
           <li className="nav-item active">
