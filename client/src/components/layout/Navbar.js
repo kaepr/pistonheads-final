@@ -64,7 +64,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           </li>
           <li className="nav-item active">
             <Link className="nav-link" to="/recommend">
-              <span>Recommend</span>
+              <i className="fa fa-trophy"></i>
+              {"  "}  <span>Recommend</span>
             </Link>
           </li>
           <li className="nav-item active">
@@ -112,7 +113,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           </li>
           <li className="nav-item active">
             <Link className="nav-link" to="/recommend">
-              <span>Recommend</span>
+              <i className="fa fa-trophy"></i>
+              {"  "}  <span>Recommend</span>
             </Link>
           </li>
           <li className="nav-item active">
@@ -145,57 +147,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { logout })(Navbar);
-
-/* 
-<div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <i className="fas fa-gamepad"></i> <span>PISTONHEADS</span>
-        </Link>
-      </div>
-        <Link
-          onClick={() => {
-            setisActive(!isActive);
-          }}
-          role="button"
-          className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </Link>
-
-
-
-          auth links
-          <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <i className="fas fa-gamepad"></i> <span>PISTONHEADS</span>
-        </Link>
-      </div>
-
-      <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
-        <div className="navbar-end">
-          <Link className="navbar-item" to="/streaming">
-            <span>Streaming</span>
-          </Link>
-          <Link className="navbar-item" to="/profiles">
-            <i className="fas fa-user-circle"></i> <span>All Users</span>
-          </Link>
-          <Link className="navbar-item" to="/dashboard">
-            <span>Dashboard</span>
-          </Link>
-          <Link className="navbar-item" to="/posts">
-            <span>Forum</span>
-          </Link>
-          <Link className="navbar-item" onClick={logout} to="/">
-            <i className="fas fa-sign-out-alt"></i>
-            <span>Logout</span>
-          </Link>
-        </div>
-      </div>
-
-
-*/

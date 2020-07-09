@@ -1,10 +1,13 @@
 import React from "react";
+import "./style.scss";
 
 const SearchFilter = ({ value, handleChange }) => {
   return (
     <div>
-      <h4>Input here the genre you want to see : </h4>
+      <h4>Type your favorite genre to get the latest games : </h4>
+      <br />
       <input value={value} onChange={handleChange} />
+      <br />
     </div>
   );
 };

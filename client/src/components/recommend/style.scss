@@ -1,0 +1,45 @@
+.game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 300px;
+  width: 900px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  margin: 40px 0 20px 300px;
+  border-radius: 10px;
+}
+
+.game-image-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.game-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.game-info-area {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  font-size: 20px;
+  text-align: left;
+  flex: 0 1 35%;
+}
+
+.game-name {
+  padding-top: 60px;
+}
+
+.game-genre {
+  padding-bottom: 40px;
+}
